@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: %i[create]
+
   def new
 
   end
@@ -9,9 +11,9 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to myaccount_path
     else
-      user = User.find_by(email: params[:session][:email])
-      if @user && @user.authenticate(params[:session][:password])
-        session[:user_id] = @user.id
+      user = User.find_by(email: params[:user][:email])
+      if user && user.authenticate(params[:user][:password])
+        session[:user_id] = user.id
         redirect_to myaccount_path
       else
         flash[:failure] = "That login was unsuccessful"

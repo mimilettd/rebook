@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/newaccount', to: 'users#new'
   get '/myaccount', to: 'users#show'
   get 'auth/:provider/callback',  to: 'sessions#create'
+  resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create]
 end

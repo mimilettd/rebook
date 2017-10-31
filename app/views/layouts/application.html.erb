@@ -12,6 +12,9 @@
     <ul class="top-nav">
       <li class="top-nav"><a class="signin" href="/signin">Sign In</a></li>
       <li class="top-nav"><a class="help" href="/help">Help</a></li>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, raw(msg), class: name %>
+      <% end %>
     </ul>
     <%= yield %>
   </body>
