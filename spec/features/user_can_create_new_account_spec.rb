@@ -17,7 +17,7 @@ feature "User can create an account" do
     fill_in "Password", with: "password"
     fill_in "Re-enter password", with: "password"
 
-    click_on "Create your ReBook account"
+    click_on "Sign Up"
 
     expect(current_path).to eq('/myaccount')
   end
