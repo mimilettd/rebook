@@ -1,0 +1,24 @@
+ul.top-nav {
+    list-style-type: none;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.top-nav {
+    float: right;
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+}
+
+li.top-nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 2px 8px;
+    text-decoration: none;
+}
+
+li a:hover {
+	text-decoration: underline;
+}
