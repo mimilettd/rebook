@@ -8,7 +8,7 @@ feature "User can create an account" do
 
     expect(current_path).to eq('/signin')
 
-    click_on "Create your ReBook account"
+    click_on "Register"
 
     expect(current_path).to eq('/newaccount')
 
