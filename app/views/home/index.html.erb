@@ -7,7 +7,7 @@
 <div class="hero-image">
   <div class="hero-text">
     <h1 style="font-family:sans-serif;font-size:20px;color:black">READ TO YOUR HEART'S CONTENT</h1>
-    <a href="/signin"><button>Try ReBook free</button></a>
+    <a href="/signin" style="font-size:12px"><button>Try ReBook free</button></a>
      <p class="fine-print">$9.99 per month after 30 days. Cancel anytime.</p>
   </div>
 </div>
@@ -15,4 +15,49 @@
 <div class="root-align">
   <h3 class="root">A book subscription service that will change the way you read.</h3>
   <p class="fine-print">Check a book today and get it delivered to you with our 2-day shipping.</p>
+  <br>
 </div>
+
+<div class="root-align">
+  <div class="w3-container">
+    <div class="w3-row">
+      <a href="javascript:void(0)" onclick="openCity(event, 'popularRead');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Popular Read</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openCity(event, 'firstRead');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Great First Read</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openCity(event, 'latestRead');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Latest Releases</div>
+      </a>
+    </div>
+
+    <div id="popularRead" class="w3-container city" style="display:none">
+      <p>Placeholder for books.</p>
+    </div>
+
+    <div id="firstRead" class="w3-container city" style="display:none">
+      <p>Placeholder for books.</p>
+    </div>
+
+    <div id="latestRead" class="w3-container city" style="display:none">
+      <p>Placeholder for books.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+</script>
