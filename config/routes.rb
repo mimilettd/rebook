@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get '/signin', to: 'sessions#new'
+  get '/signout', to: 'sessions#destroy'
   get '/newaccount', to: 'users#new'
   get '/myaccount', to: 'users#show'
   get 'auth/:provider/callback',  to: 'sessions#create'
