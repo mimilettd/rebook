@@ -2,6 +2,18 @@ div.root {
   margin-left: 15%;
   margin-right: 15%;
 }
+
+div.root-align {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
+
+h3.root {
+  font: 17px/1.231 arial,helvetica,clean,sans-serif;
+  font-weight: 600;
+  color: black;
+}
 p.logo {
   font-family: 'Lato', sans-serif;
   -webkit-margin-before: .5em;
