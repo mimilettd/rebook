@@ -1,0 +1,67 @@
+div.root {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: -20px;
+}
+
+div.root-align {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
+
+h3.root {
+  font: 17px/1.231 arial,helvetica,clean,sans-serif;
+  font-weight: 600;
+  color: black;
+}
+p.logo {
+  font-family: 'Lato', sans-serif;
+  -webkit-margin-before: 1em;
+  font-size: 12px;
+}
+
+p.fine-print {
+  font: 12px/1.231 arial,helvetica,clean,sans-serif;
+  margin-top: 1rem;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero-image {
+  background-image: url("https://i.imgur.com/0vwQsAA.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #FF9933;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
