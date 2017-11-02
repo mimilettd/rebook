@@ -13,6 +13,7 @@ Rails.application.config.assets.precompile += %w( image.css )
 Rails.application.config.assets.precompile += %w( login.css )
 Rails.application.config.assets.precompile += %w( navigation.css )
 Rails.application.config.assets.precompile += %w( root.css )
+Rails.application.config.assets.precompile += %w( search_bar.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
