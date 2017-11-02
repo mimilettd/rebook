@@ -35,6 +35,7 @@ gem "figaro"
 gem 'omniauth-google-oauth2'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'bullet'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
