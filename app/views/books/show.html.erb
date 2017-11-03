@@ -13,6 +13,7 @@
         <p class="book">By: <%= @book.author %></p>
         <p class="book">ISBN: <%= @book.ISBN %></p>
         <p class="book">Publisher: <%= @book.publisher.name %></p>
+        <p class="book"><span class="stars">4.5</span></p>
       </div>
       <div class="col-4 right">
         <% if current_user.nil? %>
@@ -26,8 +27,15 @@
           <li>After your trial, ReBook is just $9.99/month</li>
         </ul>
       </div>
-    </div>
-    <span class="stars">4.5</span>
+
+<div id="goodreads-widget">
+  <div id="gr_header"><h1><a rel="nofollow" href="https://www.goodreads.com/book/show/2956.The_Adventures_of_Huckleberry_Finn">Goodreads reviews for The Adventures of Huckleberry Finn</a></h1></div>
+  <iframe id="the_iframe" src="https://www.goodreads.com/api/reviews_widget_iframe?did=31368&format=html&header_text=Goodreads+reviews+for+The+Adventures+of+Huckleberry+Finn&isbn=0142437174&links=007eb0&min_rating=&num_reviews=&review_back=ffffff&stars=FF9900&stylesheet=&text=444" width="575" height="500" frameborder="0"></iframe>
+  <div id="gr_footer">
+    <a class="gr_branding" target="_blank" rel="nofollow" href="https://www.goodreads.com/book/show/2956.The_Adventures_of_Huckleberry_Finn?utm_medium=api&utm_source=reviews_widget">Reviews from Goodreads.com</a>
+  </div>
+</div>
+    
 </div>
   <script>
     $(function() {
