@@ -2,7 +2,9 @@ FactoryBot.define do
   factory :book do
     association :category
     association :publisher
-    title "MyString"
+    sequence :title do |n|
+      "Book#{n}"
+    end
     subtitle "MyString"
     author "MyString"
     description "MyString"

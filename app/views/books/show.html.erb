@@ -1,0 +1,18 @@
+<p><%= link_to @book.category.name, category_path(@book.category) %></p>
+
+<div class="container">
+  <div class="row">
+    <div class=".col-sm-">
+      <%= image_tag(@book.image_url) %>
+    </div>
+    <div class=".col-sm-">
+      <p><%= @book.title  %></p>
+      <% if @book.subtitle.present? %>
+        <p><%= @book.subtitle %></p>
+      <% end %>
+      <p>By: <%= @book.author %></p>
+      <p>ISBN: <%= @book.ISBN %></p>
+      <p>Publisher: <%= @book.publisher.name %></p>
+    </div>
+  </div>
+</div>
