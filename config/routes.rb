@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/newaccount', to: 'users#new'
   get '/myaccount', to: 'users#show'
   get 'auth/:provider/callback',  to: 'sessions#create'
+  get '/search', to: 'search#index'
   resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create]

@@ -1,0 +1,30 @@
+<div class="root">
+  <p class="category"><%= link_to "Categories", categories_path %>  <i class="fa fa-angle-right arrow" aria-hidden="true"></i> <%= link_to @book.category.name, category_path(@book.category) %></p>
+
+    <div class="row">
+      <div class=".col-sm- book">
+        <%= image_tag(@book.image_url, class: "resize") %>
+      </div>
+      <div class=".col-sm- book">
+        <h1 class="book"><%= @book.title  %></h1>
+        <% if @book.subtitle.present? %>
+          <h2 class="book"><%= @book.subtitle %></h2>
+        <% end %>
+        <p class="book">By: <%= @book.author %></p>
+        <p class="book">ISBN: <%= @book.ISBN %></p>
+        <p class="book">Publisher: <%= @book.publisher.name %></p>
+      </div>
+      <div class="col-4 right">
+        <% if current_user.nil? %>
+          <a href="/signin"><button type="button" class="btn btn btn-lg btn-block">Free with 30-day trial</button></a>
+        <% end %>
+        <p class="membership">Membership details <i class="fa fa-level-down" aria-hidden="true"></i></p>
+        <ul class="membership">
+          <li>A 30-day trial plus your first ReBook, free</li>
+          <li>Only one book can be checked out at a time. There is no limit to how many books can be checked out a month</li>
+          <li>Return books to ReBook at no additional cost through our shipping label</li>
+          <li>After your trial, ReBook is just $9.99/month</li>
+        </ul>
+      </div>
+    </div>
+</div>
