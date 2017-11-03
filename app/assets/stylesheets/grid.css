@@ -1,3 +1,21 @@
 .book {
   margin: 10px;
 }
+
+.right {
+  margin-left: 200px;
+}
+
+.right button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  color: black;
+  background-color: #FF9933;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Arial,sans-serif;
+}
+
