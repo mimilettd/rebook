@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20171102215105) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "books", force: :cascade do |t|
-    t.integer "category_id"
-    t.integer "publisher_id"
+    t.bigint "category_id"
+    t.bigint "publisher_id"
     t.string "title"
     t.string "subtitle"
     t.string "author"
@@ -60,4 +63,6 @@ ActiveRecord::Schema.define(version: 20171102215105) do
     t.datetime "oauth_expires_at"
   end
 
+  add_foreign_key "books", "categories"
+  add_foreign_key "books", "publishers"
 end
