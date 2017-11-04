@@ -13,7 +13,8 @@
         <p class="book">By: <%= @book.author %></p>
         <p class="book">ISBN: <%= @book.ISBN %></p>
         <p class="book">Publisher: <%= @book.publisher.name %></p>
-        <p class="book"><span class="stars">4.5</span></p>
+        <p class="book"><span class="stars"><%= raw @average_rating %></span></p>
+        <p class="book"><small><%= raw @average_rating %> avg. rating</small></p>
       </div>
       <div class="col-4 right">
         <% if current_user.nil? %>
