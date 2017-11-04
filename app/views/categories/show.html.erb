@@ -1,21 +1,21 @@
 <div class="root">
-<h2><%= @category.name %></h2>
-<hr>
+  <h2><%= @category.name %></h2>
+  <hr>
 
-<h3>Popular Reads</h3>
-<hr>
+  <h3>Popular Reads</h3>
+  <hr>
 
-<h3>New Releases</h3>
-<hr>
+  <h3>New Releases</h3>
+  <hr>
 
-<h3>All</h3>
-<hr>
+  <h3>All</h3>
+  <hr>
 
-<div class="row">
-<% @books.each do |book| %>
-  <div class="col-sm- book">
-    <%= link_to image_tag(book.image_url, class: "resize"), book_path(book) %>
+  <div class="row">
+  <% @books.each do |book| %>
+    <div class="col-sm- book">
+      <%= link_to image_tag(book.image_url, class: "resize"), book_path(book) %>
+    </div>
+  <% end %>
   </div>
-<% end %>
-</div>
 </div>
