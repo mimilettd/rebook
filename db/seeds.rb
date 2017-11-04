@@ -41,5 +41,8 @@
 
 #Book.create(category: Category.find_or_create_by(name: "Fiction"), publisher: Publisher.find_or_create_by(name: "Knopf Doubleday Publishing Group"), title: "Colorless Tsukuru Tazaki and His Years of Pilgrimage", author: "Haruki Murakami", description: "Colorless Tsukuru Tazaki and His Years of Pilgrimage is the long-awaited new novel—a book that sold more than a million copies the first week it went on sale in Japan—from the award-winning, internationally best-selling author Haruki Murakami.", ISBN: "9780804170123", image_url: "https://prodimage.images-bn.com/pimages/9780804170123_p0_v3_s550x406.jpg")
 
-wimpy_kid = Book.find_by(title: "The Getaway")
-wimpy_kid.update_columns(ISBN: "9781419725456")
+#wimpy_kid = Book.find_by(title: "The Getaway")
+#wimpy_kid.update_columns(ISBN: "9781419725456")
+
+little_fires = Book.find_by(title: "Little Fires Everywhere")
+little_fires.update_columns(ISBN: "9780735224292")
