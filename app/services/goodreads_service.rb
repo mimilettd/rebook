@@ -13,6 +13,15 @@ class GoodreadsService
     new.fetch_average_rating(isbn)
   end
 
+  def fetch_reviews(isbn)
+    response = conn.get "https://www.goodreads.com/book/isbn/#{isbn}?format=json&key=#{ENV['GOODREADS_CLIENT_ID']}"
+    JSON.parse(response.body)["reviews_widget"]
+  end
+
+  def self.fetch_reviews(isbn)
+    new.fetch_reviews(isbn)
+  end
+
   private
   attr_reader :conn
 end
