@@ -33,6 +33,29 @@
         <%= content_tag :div, raw(msg), class: name %>
       <% end %>
     </ul>
+
+<div class="root">
+  <a href="/"><img border="0" alt="W3Schools" src="https://i.imgur.com/VCpgqpm.png" width="50" height="auto">
+</a>
+  <p class="logo">ReBook | a <strong>mimizon</strong> company</p>
+  <li class="dropdown" style="position:relative;left:195px;bottom:36px;">
+    <a href="javascript:void(0)" class="dropbtn">Browse ReBook</a>
+    <div class="dropdown-content">
+      <% categories.each do |category| %>
+        <a href="/<%= category.slug %>"><%= category.name %></a>
+      <% end %>
+        <a href="#">More categories</a>
+    </div>
+  </li>
+  <div class="box" style="position:relative;left:83%;bottom:55px">
+    <div class="container-2">
+      <form action="/search" method="get">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="text" name="search" id="search" placeholder="Search for a great book" />
+      </form>
+    </div>
+  </div>
+</div>
     <%= yield %>
   </body>
 </html>
