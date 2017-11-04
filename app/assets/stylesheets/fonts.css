@@ -15,6 +15,22 @@ h2.book {
   font-family: Arial,sans-serif;
 }
 
+h3.description {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: #1a1c1d;
+  font-family: Arial,sans-serif;
+}
+
+p.description {
+  font-family: Arial,sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  width: 600px;
+}
+
 p.book {
   color: rgba(26,28,29,.65);
   font-family: Arial,sans-serif;
