@@ -7,6 +7,7 @@ class GoodreadsService
 
   def fetch_average_rating(isbn)
     response = conn.get "/book/review_counts.json?isbns=#{isbn}&key=#{ENV['GOODREADS_CLIENT_ID']}"
+    JSON.parse(response.body)["books"][0]["average_rating"]
   end
 
   def self.fetch_average_rating(isbn)
