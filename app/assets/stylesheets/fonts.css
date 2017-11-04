@@ -5,6 +5,8 @@ h1.book {
   line-height: 34px;
   color: #1a1c1d;
   margin-top: -6px;
+  width:300px;
+  word-wrap:break-word;
 }
 
 h2.book {
