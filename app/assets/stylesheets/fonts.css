@@ -26,6 +26,16 @@ h3.description {
   font-family: Arial,sans-serif;
 }
 
+h3.search {
+  font-size: 160%;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+span.key {
+  color: #F15D22;
+}
+
 p.description {
   font-family: Arial,sans-serif;
   font-size: 13px;
