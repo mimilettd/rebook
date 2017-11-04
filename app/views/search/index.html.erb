@@ -1,5 +1,8 @@
 <div class="root">
   <div class="col-sm- book">
-    <%= link_to image_tag(@book.image_url, class: "resize"), book_path(@book) %>
+    <h3 class="search"><%= pluralize(@search_results.count, 'result') %> for <span class="key"><%= raw @search_term %></span></h3>
+    <% @search_results.each do |result| %>
+      <%= link_to image_tag(result.image_url, class: "resize"), book_path(result) %>
+    <% end %>
   </div>
 </div>

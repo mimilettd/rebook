@@ -6,6 +6,9 @@ class Book < ApplicationRecord
 
   before_validation :generate_slug
 
+  include PgSearch
+  pg_search_scope :search_by_title, :against => :title
+
   def generate_slug
     self.slug = title.parameterize
   end
