@@ -1,0 +1,14 @@
+.orange {
+    background-color: #FF9933; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font: 11px system-ui;
+}
+
+.button1 {border-radius: 2px;}
