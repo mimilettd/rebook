@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback',  to: 'sessions#create'
   get '/search', to: 'search#index'
   get '/help', to: 'help#index'
+  get '/categories', to: 'categories#index'
   resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create]

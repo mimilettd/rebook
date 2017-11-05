@@ -15,7 +15,15 @@
   <% @books.each do |book| %>
     <div class="col-sm- book">
       <%= link_to image_tag(book.image_url, class: "resize"), book_path(book) %>
+      <p class="book-cat"><%= book.title %></p>
+      <p class="book-cat">By <%= book.author %></p>
+      <p><span class="stars"><%= book.average_rating %></span></p>
     </div>
   <% end %>
   </div>
 </div>
+<script>
+  $(function() {
+  $('span.stars').stars();
+  });
+</script>

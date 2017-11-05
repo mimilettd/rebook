@@ -12,4 +12,8 @@ class Book < ApplicationRecord
   def generate_slug
     self.slug = title.parameterize
   end
+
+  def average_rating
+    ReviewsWidget.fetch_average_rating(self.ISBN)
+  end
 end
