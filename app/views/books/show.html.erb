@@ -1,5 +1,5 @@
 <div class="root">
-  <p class="category"><%= link_to "Categories", categories_path %>  <i class="fa fa-angle-right arrow" aria-hidden="true"></i> <%= link_to @book.category.name, category_path(@book.category) %></p>
+  <p class="category"><%= link_to "Categories", categories_path %>  <i class="fa fa-angle-right arrow" aria-hidden="true"></i> <%= link_to @book.category.name, category_path(@book.category.slug) %></p>
 
   <div class="row">
     <div class=".col-sm- book">

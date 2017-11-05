@@ -9,6 +9,14 @@ h1.book {
   word-wrap:break-word;
 }
 
+h1.cat-index {
+  font-size: 174%;
+  margin-bottom: 10px;
+  color: #F15D22;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
 h2.book {
   font-size: 16px;
   line-height: 10px;
@@ -56,6 +64,12 @@ p.book-cat {
   font-family: 'Lato', sans-serif;
   margin-top: 15px;
   line-height: .25;
+}
+
+p.cat-index {
+  font-family: sans-serif;
+  color: #155799;
+  text-decoration: underline;
 }
 
 p.help {
