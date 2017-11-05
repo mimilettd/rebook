@@ -17,6 +17,7 @@ Rails.application.config.assets.precompile += %w( search_bar.css )
 Rails.application.config.assets.precompile += %w( fonts.css )
 Rails.application.config.assets.precompile += %w( stars.css )
 Rails.application.config.assets.precompile += %w( goodreads.css )
+Rails.application.config.assets.precompile += %w( buttons.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

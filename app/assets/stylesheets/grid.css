@@ -19,3 +19,11 @@
   font-family: Arial,sans-serif;
 }
 
+#rcorners {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 250px;
+    height: 130px;
+    text-align:center;
+}

@@ -50,6 +50,15 @@ p.book {
   line-height: 10px;
 }
 
+p.help {
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: normal;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
 p.category {
   font-size: 14px;
   line-height: 20px;
