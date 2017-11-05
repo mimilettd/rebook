@@ -8,6 +8,6 @@ class CategoriesController < ApplicationController
     if @category.nil?
       @category = Category.find(params["id"])
     end
-    @books = @category.books
+    @books = @category.books.order(:title)
   end
 end
