@@ -15,9 +15,6 @@ ActiveRecord::Schema.define(version: 20171104220805) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "books", force: :cascade do |t|
     t.bigint "category_id"
     t.bigint "publisher_id"
