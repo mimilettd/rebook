@@ -50,6 +50,14 @@ p.book {
   line-height: 10px;
 }
 
+p.book-cat {
+  cursor: pointer;
+  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 15px;
+  line-height: .25;
+}
+
 p.help {
   margin-bottom: 15px;
   font-size: 20px;
