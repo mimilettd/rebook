@@ -4,7 +4,7 @@
   outline: none;
 }
 
-body {
+div.signin {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -23,7 +23,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.left {
+.left-signin {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ body {
   height: 400px;
 }
 
-h1 {
+h1.signin {
   margin: 0 0 20px 0;
   font-weight: 300;
   font-size: 28px;
@@ -103,7 +103,7 @@ input[type="submit"]:active {
   text-align: center;
 }
 
-.right {
+.right-signin {
   position: absolute;
   top: 0;
   right: 0;
@@ -117,7 +117,7 @@ input[type="submit"]:active {
   border-radius: 0 2px 2px 0;
 }
 
-.right .loginwith {
+.right-signin .loginwith {
   display: block;
   margin-bottom: 40px;
   font-size: 28px;
