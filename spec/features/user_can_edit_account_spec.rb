@@ -20,7 +20,11 @@ feature "As a registered user" do
 
     expect(current_path).to eq("/myaccount")
 
-    click_on "Personal Information"
+    click_on "View account details"
+
+    within(".address") do
+      click_on "Edit"
+    end
 
     fill_in "user[street_address]", with: "1313 Disneyland Dr"
     fill_in "user[city]", with: "Anaheim"

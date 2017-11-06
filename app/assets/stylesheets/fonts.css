@@ -40,6 +40,22 @@ h3.search {
   font-family: sans-serif;
 }
 
+h3.account {
+  font-weight: 700;
+  color: #1a1c1d;
+  font-size: 26px;
+  line-height: 34px;
+  font-family: Arial,sans-serif;
+}
+
+h4.account {
+  font-weight: 700;
+  color: #1a1c1d;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: Arial,sans-serif;
+}
+
 span.key {
   color: #F15D22;
 }
@@ -90,6 +106,29 @@ p.category {
 
 p.membership {
   margin-top: 3%;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+p.setting {
+  color: rgba(26,28,29,.65);
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+p.display-setting {
+  color: #212325;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+a.account {
+  color: #1a1c1d;
+  cursor: pointer;
+  text-decoration: none;
   font-family: Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;

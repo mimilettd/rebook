@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :books, only: [:index, :show]
 
+  namespace :account do
+    get '/settings', to: 'settings#show'
+  end
+
   get "/:slug" => "categories#show"
 end

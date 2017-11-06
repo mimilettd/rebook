@@ -15,7 +15,9 @@ feature "User can signout" do
 
     click_button "Sign In"
 
-    click_on "Sign Out"
+    click_on "Hi, Mimi Le!"
+
+    click_on "Not Mimi Le? Sign out"
 
     expect(current_path).to eq('/')
     expect(page).to have_content("Sign In")

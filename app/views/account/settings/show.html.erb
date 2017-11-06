@@ -1,0 +1,30 @@
+<div class="root">
+  <div class="row">
+    <div class="col-sm">
+      <%= render "side_nav" %>
+    </div>
+    <div class="col-8">
+      <h4 class="account">Your account</h4>
+      <p class="setting">Update your ReBook account</p>
+      <div class="row">
+        <div class="col">
+          <p class="display-setting">Name</p>
+          <p class="setting"><%=current_user.name %></p>
+        </div>
+        <div class="col">
+          <p class="display-setting">Email</p>
+          <p class="setting"><%= current_user.email %></p>
+        </div>
+        <div class="col">
+          <p class="display-setting">Phone number</p>
+          <% if current_user.phone_number.present? %>
+            <p class="setting"><%= current_user.phone_number %></p>
+          <% else %>
+            <p class="setting">N/A</p>
+          <% end %>
+        </div>
+        <div class="col">Edit</div>
+      </div>
+    </div>
+  </div>
+</div>
