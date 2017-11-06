@@ -118,11 +118,23 @@ p.setting {
   line-height: 20px;
 }
 
+p.sub {
+  margin-top: -15px;
+}
+
+p.main {
+  margin-top: -10px;
+}
+
 p.display-setting {
   color: #212325;
   font-family: Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
+}
+
+p.display-setting a {
+  color: #007eb0;
 }
 
 a.account {

@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
   get '/help', to: 'help#index'
   get '/categories', to: 'categories#index'
+  get '/editaccount', to: 'users#edit'
   resources :sessions, only: [:create, :destroy]
 
-  resources :users, only: [:create]
+  resources :users, only: [:create, :update]
   resources :categories, only: [:index, :show]
   resources :books, only: [:index, :show]
 
