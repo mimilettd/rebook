@@ -11,10 +11,11 @@ h1.book {
 
 h1.cat-index {
   font-size: 174%;
-  margin-bottom: 10px;
   color: #F15D22;
   font-weight: bold;
   font-family: sans-serif;
+  position: absolute;
+  top: 80px;
 }
 
 h2.book {
@@ -23,6 +24,15 @@ h2.book {
   margin-bottom: 25px;
   color: rgba(26,28,29,.65);
   font-family: Arial,sans-serif;
+}
+
+h2.category {
+  color: #333;
+  font-weight: normal;
+  font-size: 22px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 90px;
 }
 
 h3.description {
@@ -38,6 +48,29 @@ h3.search {
   font-size: 160%;
   font-weight: bold;
   font-family: sans-serif;
+}
+
+h3.account {
+  font-weight: 700;
+  color: #1a1c1d;
+  font-size: 26px;
+  line-height: 34px;
+  font-family: Arial,sans-serif;
+}
+
+h3.category {
+      font: normal 20px Arial!important;
+    color: #888!important;
+    margin-bottom: 12px!important;
+    text-align: left;
+}
+
+h4.account {
+  font-weight: 700;
+  color: #1a1c1d;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: Arial,sans-serif;
 }
 
 span.key {
@@ -90,6 +123,41 @@ p.category {
 
 p.membership {
   margin-top: 3%;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+p.setting {
+  color: rgba(26,28,29,.65);
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+p.sub {
+  margin-top: -15px;
+}
+
+p.main {
+  margin-top: -10px;
+}
+
+p.display-setting {
+  color: #212325;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+p.display-setting a {
+  color: #007eb0;
+}
+
+a.account {
+  color: #1a1c1d;
+  cursor: pointer;
+  text-decoration: none;
   font-family: Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;

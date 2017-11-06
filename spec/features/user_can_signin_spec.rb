@@ -32,7 +32,7 @@ feature "User can signin" do
     fill_in "user[email]", with: "mimi@rebook.com"
     fill_in "user[password]", with: "password"
 
-    click_button "Sign In"
+    click_button "Sign in"
 
     expect(current_path).to eq('/myaccount')
   end
@@ -43,7 +43,7 @@ feature "User can signin" do
 
     visit signin_path
 
-    click_link "gmail"
+    click_link "Log in with Google+"
 
     expect(current_path).to eq('/myaccount')
   end

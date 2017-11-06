@@ -32,12 +32,12 @@ feature "User can create an account" do
 
     expect(current_path).to eq('/newaccount')
 
-    fill_in "Your name", with: "Mimi Le"
-    fill_in "Email", with: "mimi@rebook.com"
-    fill_in "Password", with: "password"
-    fill_in "Re-enter password", with: "password"
+    fill_in "user[name]", with: "Mimi Le"
+    fill_in "user[email]", with: "mimi@rebook.com"
+    fill_in "user[password]", with: "password"
+    fill_in "user[password_confirmation]", with: "password"
 
-    click_on "Sign Up"
+    click_button "Sign up"
 
     expect(current_path).to eq('/myaccount')
   end
@@ -46,7 +46,7 @@ feature "User can create an account" do
 
     visit newaccount_path
 
-    click_link "gmail"
+    click_link "Log in with Google+"
 
     expect(current_path).to eq('/myaccount')
   end

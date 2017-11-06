@@ -1,6 +1,14 @@
 li a:hover, .dropdown:hover .dropbtn {
 }
 
+.dropbtn {
+  text-decoration: none;
+}
+
+a.dropbtn {
+  color: black;
+}
+
 li.dropdown {
     display: inline-block;
     font: 12px/1.231 arial,helvetica,clean,sans-serif;
