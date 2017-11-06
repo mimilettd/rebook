@@ -1,23 +1,19 @@
-<div class="container">
-	<section id="content">
-		<form action="/sessions" method="post">
-			<h3>Sign in with your ReBook account</h3>
-                        <a href="/auth/google"><img border="0" alt="gmail" src="https://i.imgur.com/RWMS2zf.png" width="50%" height="auth" style="margin-bottom:5px"></a>
-			<div>
-				<input type="text" name="user[email]" placeholder="Email" required="" id="email" />
-			</div>
-			<div>
-				<input type="password" name="user[password]" placeholder="Password" required="" id="password" />
-			</div>
-                        <div>
-                                <input type="password" name="user[password_confirmation]" placeholder="Re-enter password" required="" id="password" />
-                        </div>
+<div id="login-box">
+  <div class="left">
+    <h1>Sign In</h1>
 
-			<div>
-				<input type="submit" value="Sign In" />
-				<a href="#">Lost your password?</a>
-				<a href="/newaccount">Register</a>
-			</div>
-		</form><!-- form -->
-	</section><!-- content -->
-</div><!-- container -->
+    <form action="/sessions" method="post">
+    <input type="text" name="user[email]" placeholder="E-mail" />
+    <input type="password" name="user[password]" placeholder="Password" />
+    <input type="password" name="user[password_confirmation]" placeholder="Retype password" />
+    <input type="submit" name="signup_submit" value="Sign in" />
+    <p class="signin"><a href="#">Lost your password?</a> | <a href="/newaccount">Register</a></p>
+  </div>
+
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    <button class="social-signin google"><a href="/auth/google">Log in with Google+</a></button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+  </div>
+  <div class="or">OR</div>
+</div>
