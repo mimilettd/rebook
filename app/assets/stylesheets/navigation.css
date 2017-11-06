@@ -4,7 +4,6 @@ ul.top-nav {
     margin-right: 15%;
     margin-left: 15%;
     padding: 0;
-    overflow: hidden;
 }
 
 li.top-nav {
@@ -15,8 +14,8 @@ li.top-nav {
 li.top-nav a {
     display: block;
     color: black;
-    text-align: center;
-    padding: 2px 8px;
+    text-align: left;
+    padding: 5px 8px;
     text-decoration: none;
 }
 

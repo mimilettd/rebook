@@ -26,14 +26,22 @@
     <ul class="top-nav">
       <% if current_user.nil? %>
         <li class="top-nav"><a class="signin" href="/signin">Sign In</a></li>
-      <% else %>
-        <li class="top-nav"><a class="signout" href="/signout" method="delete">Sign Out</a></li>
       <% end %>
       <li class="top-nav"><a class="help" href="/help">Help</a></li>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, raw(msg), class: name %>
+      <% if current_user.present? %>
+        <li class="dropdown top-nav">
+          <a href="javascript:void(0)" class="dropbtn">Hi, <%= current_user.name %>!</a>
+          <div class="dropdown-content">
+            <a href="/myaccount">Account Details</a>
+            <a href="/signout" method="delete">Not <%= current_user.name %>? Sign out</a>
+          </div>
+        </li>
       <% end %>
     </ul>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, raw(msg), class: name %>
+<% end %>
 
 <div class="root">
   <a href="/"><img border="0" alt="W3Schools" src="https://i.imgur.com/VCpgqpm.png" width="50" height="auto">
