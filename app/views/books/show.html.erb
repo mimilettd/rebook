@@ -19,6 +19,8 @@
     <div class="col-4 right">
       <% if current_user.nil? %>
         <a href="/signin"><button type="button" class="btn btn btn-lg btn-block">Free with 30-day trial</button></a>
+      <% else %>
+        <a href="/checkout"><button type="button" class="btn btn btn-lg btn-block">Checkout</button></a>
       <% end %>
       <p class="membership">Membership details <i class="fa fa-level-down" aria-hidden="true"></i></p>
       <ul class="membership">
@@ -30,7 +32,7 @@
     </div>
     
   <div class="row">
-    <div class=".col-sm- book">
+    <div class=".col-sm- book-show">
       <h3 class="description">Book Description:</h3>
       <p class="description"><%= @book.description %></p>
     </div>
