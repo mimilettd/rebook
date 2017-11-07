@@ -3,8 +3,9 @@ require 'securerandom'
 class User < ApplicationRecord
   has_secure_password
 
-  validates_presence_of :name, :email
-  validates :password, confirmation: true, presence: true
+  validates_presence_of :name, :email, :on => :create
+  validates :password, confirmation: true, presence: true, :on =>
+:create
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new

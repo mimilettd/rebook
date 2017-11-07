@@ -154,6 +154,11 @@ p.display-setting a {
   color: #007eb0;
 }
 
+p.edit {
+  font-size: 13px;
+  line-height: 37px;
+}
+
 a.account {
   color: #1a1c1d;
   cursor: pointer;

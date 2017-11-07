@@ -38,3 +38,7 @@
 div.categories {
   margin-top: 8%;
 }
+
+.col-setting {
+  max-width: 200px;
+}

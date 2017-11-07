@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/editaccount', to: 'users#edit'
   resources :sessions, only: [:create, :destroy]
 
-  resources :users, only: [:create, :update]
+  resources :users, only: [:create, :edit, :update]
   resources :categories, only: [:index, :show]
   resources :books, only: [:index, :show]
 
