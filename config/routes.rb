@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/help', to: 'help#index'
   get '/categories', to: 'categories#index'
   get '/editaccount', to: 'users#edit'
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
   resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create, :edit, :update]
