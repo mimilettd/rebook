@@ -37,6 +37,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bullet'
 gem 'pg_search'
+gem 'draper'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

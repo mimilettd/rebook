@@ -40,9 +40,9 @@
           <p class="display-setting">Oops! Looks like there is no address on file.</p>
         </div>
         <% else %>
-        <div class="col col-setting">
+        <div class="col col-setting-address">
           <p class="display-setting">Address</p>
-          <p class="sub setting"><%= current_user.address %></p>
+          <p class="sub setting"><%= @user.full_address %></p>
         </div>
         <% end %>
         <div class="col col-setting edit-address"><p class="display-setting"><a href="/editaccount?update=address">Edit</a></p></div>
