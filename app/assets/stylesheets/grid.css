@@ -1,5 +1,14 @@
 .book {
+  margin-right: 13px;
+}
+
+.book-show {
   margin: 10px;
+}
+
+.search-tile {
+  position:absolute;
+  left: 215px;
 }
 
 .right {
@@ -37,4 +46,12 @@
 
 div.categories {
   margin-top: 8%;
+}
+
+.col-setting {
+  max-width: 200px;
+}
+
+.col-setting-address {
+  max-width: 600px;
 }

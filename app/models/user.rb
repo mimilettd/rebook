@@ -3,8 +3,11 @@ require 'securerandom'
 class User < ApplicationRecord
   has_secure_password
 
-  validates_presence_of :name, :email
-  validates :password, confirmation: true, presence: true
+  validates_presence_of :name, :email, :on => :create
+  validates :password, confirmation: true, presence: true, :on =>
+:create
+
+  enum subscription_type: { trial: 0, active: 1, inactive: 2 }
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new

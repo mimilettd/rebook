@@ -1,8 +1,19 @@
 <div class="root">
-  <div class="col-sm- book">
+  <div class="col-sm- search-tile">
     <h3 class="search"><%= pluralize(@search_results.count, 'result') %> for <span class="key"><%= raw @search_term %></span></h3>
     <% @search_results.each do |result| %>
-      <%= link_to image_tag(result.image_url, class: "resize"), book_path(result) %>
+      <div class="book">
+        <%= link_to image_tag(result.image_url, class: "resize"), book_path(result) %>
+        <p class="book-cat"><%= result.title %></p>
+        <p class="book-cat">By <%= result.author %></p>
+        <p><span class="stars"><%= result.average_rating %></span></p>
+      </div>
     <% end %>
   </div>
 </div>
+
+<script>
+  $(function() {
+  $('span.stars').stars();
+  });
+</script>

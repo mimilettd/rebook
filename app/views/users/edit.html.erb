@@ -1,0 +1,17 @@
+<div id="login-box">
+  <div class="left-signin">
+    <p class="edit"><b>Name:</b></p> 
+    <p class="edit"><b>Email:</b></p> 
+    <p class="edit"><b>Phone Number:</b></p> 
+    <p class="edit"><b>Password</b></p>
+  </div>
+  <div class="right-editaccount">
+    <%= form_tag user_path(current_user), method: "put" do %>
+      <input type="text" name="user[name]" value="<%= current_user.name %>" placeholder="Name" />
+      <input type="text" name="user[email]" value="<%= current_user.email %>" placeholder="E-mail" />
+      <input type="text" name="user[phone_number]" value="<%= current_user.phone_number %>" placeholder="Phone number" />
+    <input type="password" name="user[password]" placeholder="Password" />
+    <input type="submit" name="submit" value="Done" />
+  <% end %>
+  </div>
+</div>

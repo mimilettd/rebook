@@ -13,12 +13,13 @@ Rails.application.routes.draw do
   get '/editaccount', to: 'users#edit'
   resources :sessions, only: [:create, :destroy]
 
-  resources :users, only: [:create, :update]
+  resources :users, only: [:create, :edit, :update]
   resources :categories, only: [:index, :show]
   resources :books, only: [:index, :show]
 
   namespace :account do
     get '/settings', to: 'settings#show'
+    get '/membership', to: 'membership#show'
   end
 
   get "/:slug" => "categories#show"
