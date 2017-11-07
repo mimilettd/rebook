@@ -18,6 +18,11 @@ class UsersController < ApplicationController
   end
 
   def edit
+    if params["update"] == "address"
+      render :template => 'users/address'
+    else
+      render :template => 'users/edit'
+    end
   end
 
   def update
@@ -28,6 +33,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :phone_number)
+      params.require(:user).permit(:name, :email, :password, :phone_number, :street_address, :city, :state, :zip)
     end
 end

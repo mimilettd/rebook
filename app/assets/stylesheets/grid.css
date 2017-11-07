@@ -42,3 +42,7 @@ div.categories {
 .col-setting {
   max-width: 200px;
 }
+
+.col-setting-address {
+  max-width: 600px;
+}

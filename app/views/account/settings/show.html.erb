@@ -25,6 +25,30 @@
         </div>
         <div class="col col-setting edit-info"><p class="display-setting"><a href="/editaccount">Edit</a></p></div>
       </div>
+      <br>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-8">
+      <h4 class="account">Your address</h4>
+      <div class="row">
+        <% if current_user.street_address.nil? %>
+        <div class="col col-setting-address">
+          <p class="display-setting">Oops! Looks like there is no address on file.</p>
+        </div>
+        <% else %>
+        <div class="col col-setting">
+          <p class="display-setting">Address</p>
+          <p class="sub setting"><%= current_user.address %></p>
+        </div>
+        <% end %>
+        <div class="col col-setting edit-address"><p class="display-setting"><a href="/editaccount?update=address">Edit</a></p></div>
+      </div>
+      <br>
+      <hr>
     </div>
   </div>
 </div>

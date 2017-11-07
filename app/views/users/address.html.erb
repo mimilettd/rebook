@@ -1,0 +1,17 @@
+<div id="login-box">
+  <div class="left-signin">
+    <p class="edit"><b>Street Address:</b></p> 
+    <p class="edit"><b>City:</b></p> 
+    <p class="edit"><b>State:</b></p> 
+    <p class="edit"><b>Zip:</b></p>
+  </div>
+  <div class="right-editaccount">
+    <%= form_tag user_path(current_user), method: "put" do %>
+      <input type="text" name="user[street_address]" value="<%= current_user.street_address %>" placeholder="Street address" />
+      <input type="text" name="user[city]" value="<%= current_user.city %>" placeholder="City" />
+      <input type="text" name="user[state]" value="<%= current_user.state %>" placeholder="State" />
+      <input type="text" name="user[zip]" value="<%= current_user.zip%>" placeholder="Zip" />
+      <input type="submit" name="submit" value="Done" />
+  <% end %>
+  </div>
+</div>
