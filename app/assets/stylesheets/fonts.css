@@ -159,6 +159,22 @@ p.edit {
   line-height: 37px;
 }
 
+p.subscription-type {
+  color: #212325;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+p.membership-date {
+  font-size: 13px;
+  line-height: 19px;
+  color: rgba(26,28,29,.65);
+  text-align: center;
+}
+
 a.account {
   color: #1a1c1d;
   cursor: pointer;

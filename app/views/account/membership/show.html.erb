@@ -1,3 +1,13 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+</style>
 <div class="root">
   <div class="row">
     <div class="col-sm">
@@ -5,47 +15,39 @@
     </div>
     <div class="col-8">
       <h4 class="account">Your membership</h4>
-      <p class="main setting">Update your ReBook account</p>
-      <div class="row">
-        <div class="col col-setting">
-          <p class="display-setting">Name</p>
-          <p class="sub setting"><%=current_user.name %></p>
-        </div>
-        <div class="col col-setting">
-          <p class="display-setting">Email</p>
-          <p class="sub setting"><%= current_user.email %></p>
-        </div>
-        <div class="col col-setting">
-          <p class="display-setting">Phone number</p>
-          <% if current_user.phone_number.present? %>
-            <p class="sub setting"><%= current_user.phone_number %></p>
+      <div class="row-membership">
+        <div class="double-column" style="background-color:#fff;">
+          <% if current_user.trial? %>
+            <img src="https://i.imgur.com/nzkq2u4.png" alt="subscription_type" class="subscription_type">
+            <p class="subscription-type"><b>You are on the <%= current_user.subscription_type %> subscription</b>.</p>
+          <% elsif current_user.active? %>
+            <img src="https://i.imgur.com/iZ2yZ8Q.png" alt="subscription_type" class="subscription_type">
+            <p class="subscription-type"><b>Thanks for subscribing to ReBook!</b>.</p>
           <% else %>
-            <p class="sub setting">N/A</p>
+            <img src="https://i.imgur.com/WU5214X.png" alt="subscription_type" class="subscription_type">
+            <p class="subscription-type"><b>Come back today to get the most value out of ReBook.</b>.</p>
+          <% end %>
+          <p class="membership-date">You've been a member since: <%= @user.created_at %></p>
+          <% if current_user.trial? %>
+            <p class="membership-date">Your trial ends on: <%= @user.trial_expiration %></p>
           <% end %>
         </div>
-        <div class="col col-setting edit-info"><p class="display-setting"><a href="/editaccount">Edit</a></p></div>
-      </div>
-      <br>
-      <hr>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-    </div>
-    <div class="col-8">
-      <h4 class="account">Your address</h4>
-      <div class="row">
-        <% if current_user.street_address.nil? %>
-        <div class="col col-setting-address">
-          <p class="display-setting">Oops! Looks like there is no address on file.</p>
+        <div class="double-column" style="background-color:#fff;">
+          <ul class="membership">
+            <p class="subscription-type" style="text-align:left"><b>Your subscription gives you:</b></p>
+            <% if current_user.trial? %>
+              <li>A 30-day trial of ReBook services.</li>
+              <li>Only one book can be checked out at a time. There is no limit to how many books can be checked out.</li>
+              <li>Return books to ReBook at no additional cost with our shipping label.</li>
+              <li>After your trial, ReBook is just $9.99/month.</li>
+            <% elsif current_user.active? %>
+              <li>Members have access to ReBook's large collection of books.</li>
+              <li>Only one book can be checked out at a time. There is no limit to how many books can be checked out a month</li>
+              <li>There is no "due date". ReBook members can check out a book as long as they want. No late fee applied.</li>
+              <li>Return books to ReBook at no additional cost with our shipping label.</li>
+            <% end %>
+          </ul>
         </div>
-        <% else %>
-        <div class="col col-setting-address">
-          <p class="display-setting">Address</p>
-          <p class="sub setting"></p>
-        </div>
-        <% end %>
-        <div class="col col-setting edit-address"><p class="display-setting"><a href="/editaccount?update=address">Edit</a></p></div>
       </div>
       <br>
       <hr>

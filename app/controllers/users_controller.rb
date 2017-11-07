@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, only: %i[create]
   def show
-
+    @user = current_user.decorate
   end
 
   def new

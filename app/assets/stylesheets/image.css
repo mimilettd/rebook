@@ -12,3 +12,11 @@ img.resize {
   position: relative;
   margin-bottom: 20px;
 }
+
+img.subscription_type {
+  height: 100px;
+  width: 100px;
+  display:block;
+  margin:auto;
+  margin-bottom: 15px;
+}
