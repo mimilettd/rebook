@@ -9,7 +9,13 @@ require 'capybara/rails'
 require 'database_cleaner'
 require 'support/factory_bot'
 require 'simplecov'
-SimpleCov.start 'rails'
+SimpleCov.start 'rails' do
+    add_filter "/spec/*"
+    add_filter "/app/channels/*"
+    add_filter "/app/mailers/*"
+    add_filter "/app/jobs/*"
+    add_filter "/app/helpers/*"
+end
 
 DatabaseCleaner.strategy = :truncation
 # Add additional requires below this line. Rails is not loaded until this point!
