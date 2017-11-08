@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'charges/new'
+
+  get 'charges/create'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
 
@@ -11,15 +15,18 @@ Rails.application.routes.draw do
   get '/help', to: 'help#index'
   get '/categories', to: 'categories#index'
   get '/editaccount', to: 'users#edit'
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
   resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create, :edit, :update]
   resources :categories, only: [:index, :show]
   resources :books, only: [:index, :show]
+  resources :charges, only: [:new, :create]
 
   namespace :account do
     get '/settings', to: 'settings#show'
     get '/membership', to: 'membership#show'
+    get '/payment', to: 'payment#show'
   end
 
   get "/:slug" => "categories#show"

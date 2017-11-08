@@ -48,8 +48,16 @@ div.categories {
   margin-top: 8%;
 }
 
+div.notice {
+  margin-top: 75px;
+}
+
 .col-setting {
   max-width: 200px;
+}
+
+.col-setting-subscription {
+  max-width: 175px;
 }
 
 .col-setting-address {

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to myaccount_path
+      redirect_to "/charges/new?subscription=yes"
     else
       redirect_to signin_path
     end

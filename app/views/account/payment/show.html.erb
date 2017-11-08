@@ -1,0 +1,39 @@
+<div class="root">
+  <div class="row">
+    <div class="col-sm">
+      <%= render "shared/side_nav" %>
+    </div>
+    <div class="col-8">
+      <h4 class="account">Manage payments</h4>
+      <p class="main setting">Membership Type: <%= current_user.subscription_type.capitalize %></p>
+      <div class="row">
+        <div class="col col-setting-subscription">
+          <p class="display-setting">Subscription Plan</p>
+          <% if current_user.trial? %>
+            <p class="sub setting">Trialling</p>
+          <% else %>
+            <p class="sub setting">$9.99</p>
+          <% end %>
+        </div>
+        <div class="col col-setting-subscription">
+        <p class="display-setting">Billing</p>
+          <% if current_user.trial? %>
+            <p class="sub setting">Not started</p>
+          <% else %>
+            <p class="sub setting">Recurring</p>
+          <% end %>
+        </div>
+        <div class="col col-setting-subscription">
+          <p class="display-setting">Current Period Started</p>
+          <p class="sub setting"><%= @customer.start_period %></p>
+        </div>
+        <div class="col col-setting-subscription">
+          <p class="display-setting">Current Period Ends</p>
+          <p class="sub setting"><%= @customer.end_period %></p>
+        </div>
+      </div>
+      <br>
+      <hr>
+    </div>
+  </div>
+</div>
