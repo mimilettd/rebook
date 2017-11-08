@@ -2,4 +2,6 @@
 <p><a href="/account/settings" class="account">View account details</a></p>
 <p><a href="/account/membership" class="account">View membership details</a></p>
 <p><a href="/account/payment" class="account">Manage payment</a></p>
-<p><a href="/myaccount" class="account">Checkout history</a></p>
+<% unless current_user.loans.empty? %>
+  <p><a href="/account/checkout_history" class="account">Checkout history</a></p>
+<% end %>
