@@ -1,10 +1,10 @@
 class Subscription
-  attr_reader :customer, :billing, :current_period_start, :current_period_end
+  attr_reader :id, :billing, :start_period, :end_period
   def initialize(attrs = {})
-    @customer = attrs["customer"]
+    @id = attrs["customer"]
     @billing = attrs["billing"]
-    @current_period_start = attrs["current_period_start"]
-    @current_period_end = attrs["current_period_end"]
+    @start_period = Time.at(attrs["current_period_start"]).strftime("%B %e, %Y")
+    @end_period = Time.at(attrs["current_period_end"]).strftime("%B %e, %Y")
   end
 
   def self.fetch_customer(user)

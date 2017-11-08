@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   namespace :account do
     get '/settings', to: 'settings#show'
     get '/membership', to: 'membership#show'
+    get '/payment', to: 'payment#show'
   end
 
   get "/:slug" => "categories#show"
