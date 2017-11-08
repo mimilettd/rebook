@@ -8,6 +8,8 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'database_cleaner'
 require 'support/factory_bot'
+require 'simplecov'
+SimpleCov.start 'rails'
 
 DatabaseCleaner.strategy = :truncation
 # Add additional requires below this line. Rails is not loaded until this point!

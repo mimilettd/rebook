@@ -7,7 +7,7 @@ FactoryBot.define do
     zip "MyString"
     phone_number "MyString"
     email "MyString"
-    password_digest "MyString"
+    password "MyString"
     subscription_type 1
   end
 end
