@@ -108,5 +108,5 @@
 
 #Book.create(category: Category.find_or_create_by(name: "Dystopian"), publisher: Publisher.find_or_create_by(name: "Knopf Doubleday Publishing Group"), title: "The Road", author: "Cormac McCarthy", description: "A father and his son walk alone through burned America. Nothing moves in the ravaged landscape save the ash on the wind. It is cold enough to crack stones, and when the snow falls it is gray. The sky is dark. Their destination is the coast, although they don’t know what, if anything, awaits them there. They have nothing; just a pistol to defend themselves against the lawless bands that stalk the road, the clothes they are wearing, a cart of scavenged food—and each other.", ISBN: "9780307265432", image_url: "https://prodimage.images-bn.com/pimages/9780307265432_p0_v4_s550x406.jpg")
 #
-blood_meridian = Book.find_by(title: "Blood Meridian, or The Evening Redness in the West")
-blood_meridian.update_columns(title: "Blood Meridian")
+#blood_meridian = Book.find_by(title: "Blood Meridian, or The Evening Redness in the West")
+#blood_meridian.update_columns(title: "Blood Meridian")
