@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get '/categories', to: 'categories#index'
   get '/editaccount', to: 'users#edit'
   get 'thanks', to: 'charges#thanks', as: 'thanks'
+  get 'checkout', to: 'checkout#new'
+  get 'checkout_complete', to: 'checkout#create'
+  get 'cart', to: 'cart#show'
   resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create, :edit, :update]

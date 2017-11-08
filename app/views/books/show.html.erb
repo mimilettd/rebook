@@ -27,7 +27,7 @@
           <li>After your trial, ReBook is just $9.99/month.</li>
         </ul>
       <% else %>
-        <a href="/checkout"><button type="button" class="btn btn btn-lg btn-block">Checkout</button></a>
+        <a href="/checkout?book=<%= @book.slug %>"><button type="button" class="btn btn btn-lg btn-block">Checkout</button></a>
         <p class="membership">Membership details <i class="fa fa-level-down" aria-hidden="true"></i></p>
         <ul class="membership">
           <li>Members have access to ReBook's large collection of books.</li>

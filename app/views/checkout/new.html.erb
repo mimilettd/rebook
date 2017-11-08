@@ -1,0 +1,24 @@
+<div class="container-checkout">
+  <div class="row-checkout">
+
+    <div class="top--container">
+      <div class="top">
+        <img src="<%= @book.image_url %>" alt="" class="img-responsive" />
+        <h2 class="text-center"><%= @book.title %></h2>
+        <p class="star-center"><span class="stars"><%= @book.average_rating %></span></p>
+      </div>
+    </div>
+
+    <a href="/checkout_complete?book=<%= @book.slug %>"><button class="btn btn-success btn-lg btn-fab">
+      Checkout &rarr;
+    </button></a>
+  </div>
+  
+</div>
+
+
+<script>
+  $(function() {
+  $('span.stars').stars();
+  });
+</script>
