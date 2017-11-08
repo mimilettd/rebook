@@ -1,22 +1,26 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: <%= pretty_amount(@amount) %></span>
-    </label>
-  </article>
+<div class="root">
+  <div class="notice">
+    <h3 class="notice">You're close to entering a book lover's dream!</h3>
+    <p class="notice">To take advantage of the benefits that come with the trial subscription, we'll need your billing information on record. If you enjoyed the free trial and would like to continue your subscription, the method of payment you've chosen will automatically be charged at the end of the trial period.</p>
 
-  <%= hidden_field_tag :subscription, value: params[:subscription] %>
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="<%= @description %>"
-          data-amount="<%= @amount %>"
-          data-email="<%= current_user.email %>"
-          data-bitcoin="true"
-          data-locale="auto"></script>
-<% end %>
+    <%= hidden_field_tag :subscription, value: params[:subscription] %>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="<%= @description %>"
+            data-email="<%= current_user.email %>"
+            data-bitcoin="true"
+            data-locale="auto"></script>
+  <% end %>
+  </div>
+</div>
+
