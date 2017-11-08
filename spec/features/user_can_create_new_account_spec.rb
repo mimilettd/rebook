@@ -39,7 +39,7 @@ feature "User can create an account" do
 
     click_button "Sign up"
 
-    expect(current_path).to eq('/myaccount')
+    expect(current_path).to eq('/charges/new')
   end
   scenario "with Google Oauth" do
     stub_omniauth

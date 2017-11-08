@@ -1,6 +1,8 @@
 class Book < ApplicationRecord
   belongs_to :category
   belongs_to :publisher
+  has_many :loans
+  has_many :users, through: :loans
   validates_presence_of :title, :author, :description, :ISBN, :image_url
   validates :slug, uniqueness: true
 

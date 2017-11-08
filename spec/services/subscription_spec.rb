@@ -20,7 +20,7 @@ describe "Subscription" do
 
     subscription = Subscription.new(valid_attributes)
     expect(subscription.billing).to eq("charge_automatically")
-    expect(subscription.current_period_start).to eq(1510096432)
-    expect(subscription.current_period_end).to eq(1512688432)
+    expect(subscription.start_period).to eq("November  7, 2017")
+    expect(subscription.end_period).to eq("December  7, 2017")
   end
 end

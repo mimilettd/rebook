@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/categories', to: 'categories#index'
   get '/editaccount', to: 'users#edit'
   get 'thanks', to: 'charges#thanks', as: 'thanks'
+  get 'checkout', to: 'checkout#new'
+  get 'checkout_complete', to: 'checkout#create'
   resources :sessions, only: [:create, :destroy]
 
   resources :users, only: [:create, :edit, :update]
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
     get '/settings', to: 'settings#show'
     get '/membership', to: 'membership#show'
     get '/payment', to: 'payment#show'
+    get '/checkout_history', to: 'checkout_history#index'
   end
 
   get "/:slug" => "categories#show"

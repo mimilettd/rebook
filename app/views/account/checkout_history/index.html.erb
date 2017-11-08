@@ -1,0 +1,37 @@
+<div class="root">
+  <div class="row">
+    <div class="col-sm">
+      <%= render "shared/side_nav" %>
+    </div>
+    <div class="col-8">
+      <h4 class="account">Checkout history</h4>
+      <p class="main setting">So you've been checking out books. Way to go!</p>
+      <div class="row">
+        <div class="col col-setting-loans">
+          <p class="display-setting">Book</p>
+        </div>
+        <div class="col col-setting-loans">
+          <p class="display-setting">Checkout date</p>
+        </div>
+        <div class="col col-setting-loans">
+          <p class="display-setting">Status</p>
+        </div>
+      </div>
+      <% @loans.each do |loan| %>
+      <div class="row">
+        <div class="col col-setting-loans">
+          <p class="sub setting"><%= loan.book_title %></p>
+        </div>
+        <div class="col col-setting-loans">
+          <p class="sub setting"><%= loan.checkout_date %></p>
+        </div>
+        <div class="col col-setting-loans">
+          <p class="sub setting"><%= loan.status %></p>
+        </div>
+      </div>
+      <% end %>
+      <br>
+      <hr>
+    </div>
+  </div>
+</div>

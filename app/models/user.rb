@@ -9,6 +9,9 @@ class User < ApplicationRecord
 
   enum subscription_type: { trial: 0, active: 1, inactive: 2 }
 
+  has_many :loans
+  has_many :books, through: :loans
+
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {

@@ -63,3 +63,7 @@ div.notice {
 .col-setting-address {
   max-width: 600px;
 }
+
+.col-setting-loans {
+  max-width: 300px;
+}
