@@ -15,4 +15,5 @@ class Loan < ApplicationRecord
       "Returned"
     end
   end
+
 end

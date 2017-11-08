@@ -18,4 +18,8 @@ class Book < ApplicationRecord
   def average_rating
     ReviewsWidget.fetch_average_rating(self.ISBN)
   end
+
+  def self.recently_checked_out
+    joins(:loans).order(created_at: :desc).limit(3)
+  end
 end
