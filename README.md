@@ -1,3 +1,5 @@
+<img src="http://g.recordit.co/vQCagOBgFn.gif">
+
 ### ReBook
 
 A book rental subscription service that will allow you to access from the most popular to the most obscure printed books for as low as $10 a month.
