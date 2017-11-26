@@ -28,4 +28,8 @@ class User < ApplicationRecord
     user
   end
 
+  def already_checked_out?
+    loans.where(return_status: "checked_out").any?
+  end
+
 end

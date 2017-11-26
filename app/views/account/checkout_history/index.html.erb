@@ -16,6 +16,9 @@
         <div class="col col-setting-loans">
           <p class="display-setting">Status</p>
         </div>
+        <div class="col col-setting-loans">
+          <p class="display-setting">Return</p>
+        </div>
       </div>
       <% @loans.each do |loan| %>
       <div class="row">
@@ -27,6 +30,11 @@
         </div>
         <div class="col col-setting-loans">
           <p class="sub setting"><%= loan.status %></p>
+        </div>
+        <div class="col col-setting-loans">
+          <% if loan.status == "Checked out" %>
+            <p class="sub setting"><a href="/account/return">Print Shipping Label</a></p>
+          <% end %>
         </div>
       </div>
       <% end %>
