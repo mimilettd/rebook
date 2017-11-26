@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     get '/membership', to: 'membership#show'
     get '/payment', to: 'payment#show'
     get '/checkout_history', to: 'checkout_history#index'
+    get '/return', to: 'return#show'
   end
 
   get "/:slug" => "categories#show"
