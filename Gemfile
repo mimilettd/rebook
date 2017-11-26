@@ -39,6 +39,7 @@ gem 'bullet'
 gem 'pg_search'
 gem 'draper'
 gem 'stripe'
+gem 'simplecov', :require => false, :group => :test
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
