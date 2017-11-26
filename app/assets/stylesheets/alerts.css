@@ -1,0 +1,22 @@
+.alert-primary {
+    color: #757575;
+    background-color: #F5F5F5;
+    border-color: #BDBDBD;
+    width: 350px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    margin-left: 550px;
+}
+
+div.notice {
+  margin-top: 5px;
+}
