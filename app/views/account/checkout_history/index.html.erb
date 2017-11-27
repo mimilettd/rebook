@@ -34,6 +34,8 @@
         <div class="col col-setting-loans">
           <% if loan.status == "Checked out" %>
             <p class="sub setting"><a href="/account/return">Print Shipping Label</a></p>
+          <% else %>
+            <p class="sub setting">Received</p>
           <% end %>
         </div>
       </div>
