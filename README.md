@@ -48,3 +48,7 @@ To view the application, visit `http://localhost:3000`.
 ### Authors
 
   * Mimi Le
+  
+### Contributing
+
+Please read <a href="https://gist.github.com/PurpleBooth/b24679402957c63ec426">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.
